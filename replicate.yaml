@@ -1,0 +1,10 @@
+# replicate.yaml
+build:
+  gpu: false # We don't need a GPU for this model, which keeps it cheaper/faster
+  python_version: "3.11"
+  python_packages:
+    - "torch==2.1.0"
+    - "torchaudio==2.1.0"
+    - "speechbrain==0.5.14" # Using known stable versions
+    - "pydub==0.25.1"
+predict: "predict.py:Predictor"
